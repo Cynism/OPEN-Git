@@ -1,7 +1,7 @@
 ---
-title: "Test1"
-author: "Axel Faligot-Girardelli"
-date: "28/04/2020"
+title: test version courte
+author: 
+date: 
 output:
   html_document:
     fig_caption: yes
@@ -17,11 +17,12 @@ csl: iso690-author-date-fr-no-abstract.csl
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(ade4)
-library(FactoMineR)
-library(bookdown)
+knitr::opts_chunk$set(echo = TRUE, fig.pos= "h")
+#library(ade4)
+#library(FactoMineR)
+#library(bookdown)
 library(knitr)
+#library(tibble)
 ```
 
 ```{r logo, echo=FALSE, out.width = '12%', fig.align = "center",fig.cap="Logo Rmarkdown"}
@@ -98,5 +99,4 @@ http://factominer.free.fr/course/donnees/AnaDo_JeuDonnees_TemperatFrance.csv
 &nbsp;
 
 *Bibliographie* 
-
 

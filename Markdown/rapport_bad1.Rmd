@@ -1,7 +1,7 @@
 ---
-title: "Analyse des T°C des villes de France avec Rmarkdown"
-author: "Anne ONYME"
-date: "28/04/2020"
+title: test version courte
+author: 
+date: 
 output:
   html_document:
     fig_caption: yes
@@ -17,15 +17,15 @@ csl: iso690-author-date-fr-no-abstract.csl
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(ade4)
-library(FactoMineR)
-library(bookdown)
+knitr::opts_chunk$set(echo = TRUE, fig.pos= "h")
+#library(ade4)
+#library(FactoMineR)
+#library(bookdown)
 library(knitr)
-library(factoextra)
+#library(tibble)
 ```
 
-```{r logo, echo=FALSE, out.width = '20%', fig.align = "center",fig.cap="Logo Rmarkdown"}
+```{r logo, echo=FALSE, out.width = '12%', fig.align = "center",fig.cap="Logo Rmarkdown"}
 knitr::include_graphics("rmarkdown.png")
 ```
 
@@ -44,6 +44,7 @@ knitr::include_graphics("rmarkdown.png")
 link <- "http://factominer.free.fr/course/donnees/AnaDo_JeuDonnees_TemperatFrance.csv"
 datatemp <- read.table(link, h=TRUE, sep=";", dec=".", row.names=1,
                        encoding="latin1")
+##dd <- as_tibble(datatemp)
 ```
 
 
@@ -70,34 +71,8 @@ villes2<-factor(villes,levels(villes)[order(med)])
 boxplot(temp~villes2,las=2,col="grey",ylab="Températures mensuelles",cex.lab=0.7,cex.axis=0.7)
 ```
 
-# **Une première analyse**
 
-## **Températures par grandes régions**
-
-Les temperatures des quatres grandes régions sont : 
-
- 
-```{r tempreg, echo = F}
-moyTR<-round(tapply(datatemp$Moye,datatemp$Région,mean),2)
-maxAR<-tapply(datatemp$Ampl,datatemp$Région,max)
-dd<-data.frame(Régions=levels(datatemp$Région),Moyenne=moyTR,AmplitudeM=maxAR)
-```
-
-&nbsp;
-
-\begin{center}Table 1 : Températures par grandes régions.\end{center}  
-Régions          |	Moyennes         | Amplitude maximum 
----------------- | ----------------  | --------------------  
-`r dd$Région[1]` | `r dd$Moyenne[1]` | `r dd$AmplitudeM[1]` 
-`r dd$Région[2]` | `r dd$Moyenne[2]` | `r dd$AmplitudeM[2]` 
-
-
-**Interpretation**: Nous observons que ........................................................................  
-..................................................................................................................
-
-# **Création d'une fonction graphique**
-
-# **Analyse en Composante Principale**
+# **Analyse en Composante Principale  **
 
 ## **Rappels**
 
@@ -124,5 +99,4 @@ http://factominer.free.fr/course/donnees/AnaDo_JeuDonnees_TemperatFrance.csv
 &nbsp;
 
 *Bibliographie* 
-
 

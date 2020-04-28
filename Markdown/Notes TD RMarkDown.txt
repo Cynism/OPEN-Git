@@ -1,0 +1,49 @@
+Notes Rapports automatisés et Markdowns
+
+install.packages("rmarkdown")
+
+file > new file > Rmardown
+Mettre titre, auteur, choisir HTML
+knit HTML sur la barre des boutons
+roue crantée pour affichage dans Rstudio (show previews inline)
+
+On retrouve une partie Mardown, et plusieurs "chunks" qui contiennent du code R exécutable
+
+Modification de l'empatement de la police avec rajout d* avant et après le mot-clef
+------------------------------------------
+mise en place d'un sommaire avec :
+output: 
+  html_document:
+    toc: yes
+    toc_depht: 2
+    toc_float: true
+------------------------------------------
+on obtient dans le dossier de travail un document html consultable dans un navigateur
+
+--------------------------------
+création d'une liste à puce avec la logique "** * XXXXXX ** XXXXXX"
+# ***Titre1***
+
+* **blablabla** : blablabla
+blablabla 
+* **blablabla** : blablabla
+  * blablabla				sous-liste
+  * dfkdnk
+    * ks					sous-sous-liste
+* **blablabla** : blablabla
+blablabla
+-------------------------------
+
+Fermer Rstudio, aller sur Isaranet et télécharger les fichiers "Rmarkdown", ouvrir "rapport.html"
+
+Le but est de produire un rapport semblable, avec le plus de variables possibles. Il y aura de la mise en forme de données sous forme de tableurs, graphiques, citations, bibliographie, sommaire...
+
+Le code se trouve dans le fichier "rapport_bad.rmd", mais il est abîmé.
+
+On installe les paquets nécessaires : 
+install.packages("ade4")
+install.packages("FactoMineR")
+install.packages("bookdown")
+installed.packages("knitr")
+
+problème ligne 93, encodage ? Autres problèmes présents sur d'autres lignes pour d'autres personnes

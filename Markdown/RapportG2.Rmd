@@ -4,14 +4,14 @@ author: 'Groupe 2 : Louise ARSAC, Zélie FROMENT, Charlène LAROCHE, Paul SERVAI
   FALIGOT-GIRARDELLI, Juliette MAYER'
 date: "29/04/20"
 output:
+  word_document:
+    toc: yes
+    toc_depth: '3'
   pdf_document:
     fig_caption: yes
     number_sections: yes
     toc: yes
     toc_depth: 3
-  word_document:
-    toc: yes
-    toc_depth: '3'
   html_document:
     fig_caption: yes
     number_sections: yes

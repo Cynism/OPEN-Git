@@ -1,0 +1,31 @@
+---
+title: "Test MultiFichier"
+author: "Axel Faligot-Girardelli"
+date: "29/04/2020"
+output: 
+  html_document: 
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Contexte
+
+Bla bla bli
+
+## Données
+
+```{r,echo=TRUE}
+source("Données1.r")
+```
+
+Mes données ont `r nrow(da)` lignes.
+
+
+```{r, echo=FALSE}
+source("Graphique1.r")
+```
+
+

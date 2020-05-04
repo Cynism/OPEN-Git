@@ -3,6 +3,12 @@ title: 'Compilation de données : R Markdown & GitHub'
 author: 'G2 : L.ARSAC, Z.FROMENT, C.LAROCHE, P.SERVAIN, A.FALIGOT-GIRARDELLI, J.MAYER'
 date: "29/04/20"
 output: 
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
   pdf_document:
     fig_caption: yes
     includes:  
@@ -10,12 +16,6 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 3
-  html_document:
-    fig_caption: yes
-    number_sections: yes
-    toc: yes
-    toc_depth: 3
-    toc_float: yes
   word_document:
     fig_caption: yes
     number_sections: yes
